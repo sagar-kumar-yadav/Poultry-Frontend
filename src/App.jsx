@@ -1,12 +1,14 @@
+import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import "./App.css";
+import HeroSection from "./pages/homepage/HeroSection";
 
 function App() {
   return (
     <>
-      <div>
-        <h1>Vite + React</h1>
-      </div>
+      <Routes>
+          <Route path="/" element={<HeroSection />} />
+      </Routes>
     </>
   );
 }
