@@ -4,10 +4,10 @@ import { RxDot } from "react-icons/rx";
 
 const slides = [
   {
-    url: "src/assets/banner/banner11.jpg",
+    url: "/banner/banner11.jpg",
   },
   {
-    url: "src/assets/banner/banner12.jpg",
+    url: "/banner/banner12.jpg",
   },
 ];
 

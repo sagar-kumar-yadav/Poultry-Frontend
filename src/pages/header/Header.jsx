@@ -72,7 +72,7 @@ const Header = () => {
         >
           <div className="flex items-center ">
             <div className=" md:py-0 w-28">
-              <img src="src/assets/logo/logo.jpg" alt="logo" className="w-20" />
+              <img src="/logo/logo.jpg" alt="logo" className="w-20" />
               {/* <span className="  text-2xl font-bold italic max-sm:hidden">
                 URBANETHNIC
               </span> */}
