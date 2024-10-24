@@ -11,6 +11,8 @@ import useCategory from "../../hooks/useCategory";
 import SearchInput from "../../components/form/SearchInput";
 import { useCart } from "../../context/cart";
 
+
+
 const Header = () => {
   const [auth, setAuth] = useAuth();
   const categories = useCategory();
@@ -71,16 +73,8 @@ const Header = () => {
           }`}
         >
           <div className="flex items-center ">
-            <div className=" md:py-0 w-28">
-              <img src="/logo/logo.jpg" alt="logo" className="w-20" />
-              {/* <span className="  text-2xl font-bold italic max-sm:hidden">
-                URBANETHNIC
-              </span> */}
-              {/* <span className="  text-2xl font-bold italic max-sm:block sm:hidden">
-                U<span className="text-sm">rban</span>
-                <span>E</span>
-                <span className="text-sm">thnic</span>
-              </span> */}
+            <div className=" md:py-0 w-20">
+              <img src="/logo/logo.jpg" alt="logo-png" />
             </div>
           </div>
         </Link>
