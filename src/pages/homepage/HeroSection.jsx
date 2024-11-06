@@ -8,6 +8,7 @@ import BottomPage from "../bottompage/BottomPage";
 // import MiddleCategoryPage from "../middlepage/MiddleCategoryPage";
 import MiddleQuote from "../middlepage/MiddleQuote";
 import Banner from "../homebanner/Banner";
+import Footer from "../footer/Footer";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -173,6 +174,7 @@ const HeroSection = () => {
       </div>
 
       <BottomPage />
+      <Footer />
       {/* <div className=" flex justify-center items-center p-10 pl-56 max-md:pl-0 max-md:p-0">
         {products && products.length < total && (
           <button
