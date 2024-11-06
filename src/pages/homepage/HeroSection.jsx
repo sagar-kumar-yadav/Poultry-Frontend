@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import './herosection.css'
 import BottomPage from "../bottompage/BottomPage";
-import MiddleCategoryPage from "../middlepage/MiddleCategoryPage";
+// import MiddleCategoryPage from "../middlepage/MiddleCategoryPage";
 import MiddleQuote from "../middlepage/MiddleQuote";
 import Banner from "../homebanner/Banner";
 
@@ -69,9 +69,9 @@ const HeroSection = () => {
     <Layout title={"All Products - Best Offers"}>
       <Banner />
       <MiddleQuote />
-      <MiddleCategoryPage />
+      {/* <MiddleCategoryPage /> */}
 
-      <div className=" relative top-80 max-sm:top-56">
+      <div className=" relative top-36 max-sm:top-[-8rem]">
         <div className=" text-4xl uppercase font-semi-bold ml-[4%] mb-4 w-[90%] max-sm:text-2xl pt-8">
           Featured Product
         </div>

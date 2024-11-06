@@ -42,7 +42,7 @@ const Banner = () => {
 
   // console.log(slides[0]);
   return (
-    <div className=" h-[780px] w-[97%] m-auto relative group">
+    <div className=" h-[780px] w-[95%] m-auto relative group">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -51,7 +51,7 @@ const Banner = () => {
             opacity: index === currentSlide ? 1 : 0,
             transition: "opacity 1s ease-in-out",
           }}
-          className="w-full h-full bg-center bg-cover duration-500  rounded-md absolute top-20 max-sm:top-12"
+          className="w-full h-[72%] bg-center bg-cover duration-500  rounded-md absolute top-20 max-sm:top-12"
         >
           <span className="absolute bottom-80 text-white flex flex-col left-8 font-medium max-sm:bottom-[26rem]">
             AADARSHYOUG
@@ -84,7 +84,7 @@ const Banner = () => {
         <BsChevronCompactRight onClick={nextSlide} size={30} />
       </div>
       {/* dot length */}
-      <div className="fleconstx justify-center py-2 absolute top-[95%] -translate-x-0 translate-y-[-95%] left-[45%]">
+      <div className="fleconstx justify-center py-2 absolute top-[79%] -translate-x-0 translate-y-[-95%] left-[45%] flex">
         {slides.map((slide, index) => (
           <div key={index}>
             <div

@@ -7,7 +7,7 @@ const MiddleCategoryPage = () => {
       <div className="w-1/2 ">
         <Link to="/category/men">
           <div className=" text-[#cd1818] absolute flex flex-col items-center top-[50%] right-[50%] w-1/2">
-            <span className=" font-bold text-6xl max-sm:text-4xl">MAN</span>
+            <span className=" font-bold text-6xl max-sm:text-4xl">Poultry Farm Equipments</span>
             <span>New Arrival</span>
           </div>
 
