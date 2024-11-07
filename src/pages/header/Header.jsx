@@ -11,8 +11,6 @@ import useCategory from "../../hooks/useCategory";
 import SearchInput from "../../components/form/SearchInput";
 import { useCart } from "../../context/cart";
 
-
-
 const Header = () => {
   const [auth, setAuth] = useAuth();
   const categories = useCategory();
@@ -139,7 +137,7 @@ const Header = () => {
                   </ul>
                 </li>
                 {/* mobile menu */}
-                <div className=" sm:hidden fixed right-24">
+                {/* <div className=" sm:hidden fixed right-16">
                   <button
                     // className="w-12"
                     className={`w-8 ${isSearchOpen ? "hidden" : "block"}`}
@@ -147,8 +145,8 @@ const Header = () => {
                   >
                     <IoSearch size={24} className=" " />
                   </button>
-                </div>
-                <div
+                </div> */}
+                {/* <div
                   className={` sm:hidden ${isSearchOpen ? "block" : "hidden"}`}
                 >
                   <form onSubmit={handleSubmit} className="flex items-center ">
@@ -170,7 +168,7 @@ const Header = () => {
                       <AiOutlineClose size={26} className={` `} />
                     </button>
                   </form>
-                </div>
+                </div> */}
 
                 {/* -------------------------------- */}
                 <ul
@@ -186,22 +184,49 @@ const Header = () => {
                       {/* <span>
                         <FaRegHeart className=" fill-[#272626]" size={24} />
                       </span> */}
-                      <span className="material-symbols-outlined">
+                      {/* <span className="material-symbols-outlined">
                         favorite
-                      </span>
+                      </span> */}
                     </NavLink>
                   </li>
                 </ul>
               </>
             )}
+            <div className=" sm:hidden fixed right-16">
+              <button
+                // className="w-12"
+                className={`w-8 ${isSearchOpen ? "hidden" : "block"}`}
+                onClick={handleSearchClick}
+              >
+                <IoSearch size={24} className=" " />
+              </button>
+            </div>
+            <div className={` sm:hidden ${isSearchOpen ? "block" : "hidden"}`}>
+              <form onSubmit={handleSubmit} className="flex items-center ">
+                {isSearchOpen ? (
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    className="p-2 border border-gray-400 rounded bg-transparent h-8"
+                    value={values.keyword}
+                    onChange={(e) =>
+                      setValues({ ...values, keyword: e.target.value })
+                    }
+                  />
+                ) : null}
+                <button
+                  className="w-8 h-8 border-tl-4 border-bl-4 rounded-r-none text-[#282c3f]"
+                  onClick={handleSearchClick}
+                >
+                  <AiOutlineClose size={26} className={` `} />
+                </button>
+              </form>
+            </div>
             <li className={`${isSearchOpen ? "hidden" : "block"}`}>
               <NavLink
                 to="/cart"
                 className="flex md:inline-flex p-2 items-center mt-[14px]"
               >
-                {/* <span>
-                  <SlBag className=" fill-[#272626]" size={24} />
-                </span> */}
                 <span className="material-symbols-outlined">shopping_bag</span>
               </NavLink>
               <div className=" relative h-4 w-4 rounded-full justify-center bottom-9 left-7 flex items-center text-xs bg-black text-white">
