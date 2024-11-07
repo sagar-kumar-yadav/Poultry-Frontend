@@ -3,7 +3,7 @@ import Layout from "../../components/layout/Layout";
 import { useCart } from "../../context/cart";
 import { useAuth } from "../../context/auth";
 import { Link, useNavigate } from "react-router-dom";
-import "./CartPage.css"
+import "/src/assets/css/cartPage.css";
 
 export const CartPage = () => {
   const [cart, setCart] = useCart();
