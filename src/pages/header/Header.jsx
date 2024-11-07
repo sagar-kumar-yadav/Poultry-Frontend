@@ -68,7 +68,7 @@ const Header = () => {
         {/* logo and app name header here */}
         <Link
           to="/"
-          className={`flex items-center gap-4 ml-[4%] max-lg:ml-[7%] max-sm:ml-[9%] w-32 ${
+          className={`flex items-center gap-4 ml-[4%] max-lg:ml-[7%] max-sm:ml-[12%] w-32 ${
             isSearchOpen ? "hidden" : "block"
           }`}
         >
