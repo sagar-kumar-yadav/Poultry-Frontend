@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSearch } from '../../context/search';
 import { useCart } from '../../context/cart';
 import axios from 'axios';
+import toast from 'react-hot-toast';
 
 const SearchPage = () => {
     const navigate = useNavigate();

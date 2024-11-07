@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import Layout from '../../components/layout/Layout';
-import { useNavigate } from "react-router-dom";
+import Layout from "../../components/layout/Layout";
+import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import axios from "axios";
-import './herosection.css'
+import "./herosection.css";
 import BottomPage from "../bottompage/BottomPage";
 // import MiddleCategoryPage from "../middlepage/MiddleCategoryPage";
 import MiddleQuote from "../middlepage/MiddleQuote";
 import Banner from "../homebanner/Banner";
 import Footer from "../footer/Footer";
+import { useCart } from "../../context/cart";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ const HeroSection = () => {
   const [loading, setLoading] = useState(1);
   const [addInCart, setAddInCart] = useState([]);
   const [featureProduct, setFeatureProduct] = useState([]);
-
+  const [cart, setCart] = useCart();
 
   // get all category-----------------------------------------------------
   const getAllCategory = async () => {
@@ -66,9 +67,23 @@ const HeroSection = () => {
     getAllProducts();
   }, []);
 
+  // add to cart
+  const addToCart = (data) => {
+    // console.log(data);
+    setCart([...cart, data]);
+    localStorage.setItem("cart", JSON.stringify([...cart, data]));
+    toast.success("Item Add to Cart");
+  };
+
   return (
     <Layout title={"All Products - Best Offers"}>
+      <div className=" fixed w-16 bottom-4 right-6 z-10">
+        <Link to="https://wa.me/+919335215065" target="_blank">
+          <img src="/logo/whatsapp.png" alt="whatsapp-logo" />
+        </Link>
+      </div>
       <Banner />
+
       <MiddleQuote />
       {/* <MiddleCategoryPage /> */}
 
@@ -197,7 +212,7 @@ const HeroSection = () => {
         )}
       </div> */}
     </Layout>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
