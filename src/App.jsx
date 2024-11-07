@@ -7,6 +7,9 @@ import Login from "./pages/auth/Login";
 import Forgot from "./pages/auth/Forgot";
 import PageNotFound from "./pages/PageNotFound";
 import ProductForm from "./components/form/ProductForm";
+import { CartPage } from "./pages/cart/CartPage";
+import CheckOut from "./pages/cart/CheckOut";
+import CategoryProduct from "./pages/category/CategoryProduct";
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HeroSection />} />
         <Route path="/product-form" element={<ProductForm />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/category/:slug" element={<CategoryProduct />} />
 
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
