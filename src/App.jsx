@@ -10,6 +10,7 @@ import ProductForm from "./components/form/ProductForm";
 import { CartPage } from "./pages/cart/CartPage";
 import CheckOut from "./pages/cart/CheckOut";
 import CategoryProduct from "./pages/category/CategoryProduct";
+import SearchPage from "./pages/search/SearchPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/category/:slug" element={<CategoryProduct />} />
+        <Route path="/search" element={<SearchPage />} />
 
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />

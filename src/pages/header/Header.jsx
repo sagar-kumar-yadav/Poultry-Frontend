@@ -26,6 +26,8 @@ const Header = () => {
       const url = `${
         import.meta.env.VITE_REACT_APP_URL
       }/api/v1/product/search/${values.keyword}`;
+
+      // const url = `http://localhost:8080/api/v1/product/search/${values.keyword}`
       const { data } = await axios.get(url);
       setValues({ ...values, results: data });
       navigate("/search");
